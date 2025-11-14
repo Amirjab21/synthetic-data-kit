@@ -301,7 +301,7 @@ class LLMClient:
                     logger.info(f"Sending request to vLLM model {self.model}...")
                 
                 response = requests.post(
-                    f"{self.api_base}/chat/completions",
+                    f"{self.api_base}/api/generate",
                     headers={"Content-Type": "application/json"},
                     data=json.dumps(data),
                     timeout=180  # Increased timeout to 180 seconds
@@ -569,7 +569,7 @@ class LLMClient:
                         logger.info(f"Sending batch request to vLLM model {self.model}...")
                     
                     response = requests.post(
-                        f"{self.api_base}/chat/completions",
+                        f"{self.api_base}/api/generate",
                         headers={"Content-Type": "application/json"},
                         data=json.dumps(request_data),
                         timeout=180  # Increased timeout for batch processing

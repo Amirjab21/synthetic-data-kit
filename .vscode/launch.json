@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run synthetic-data-kit create",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/synthetic_data_kit/cli.py",
+            "args": [
+                "create",
+                "./data/parsed/",
+                "--type",
+                "qa"
+            ],
+            "console": "integratedTerminal",
+            "python": "${workspaceFolder}/venv/bin/python"
+        }
+    ]
+}
